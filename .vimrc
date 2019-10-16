@@ -4,6 +4,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'w0rp/ale'
 	Plug 'mxw/vim-jsx'
 	Plug 'pangloss/vim-javascript'
+	Plug 'elzr/vim-json'
 call plug#end()
 
 if (has("termguicolors"))
@@ -30,3 +31,6 @@ set number
 
 " Set font
 set guifont=Fira\ Code\ 15
+
+" eslintrc syntax highlighting
+autocmd BufNewFile,BufRead .eslintrc set ft=json
